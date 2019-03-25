@@ -29,5 +29,28 @@
 				return $resultado;
 			}            
         }
+
+        public function altaPeriodo(){
+            $mysqli = new mysqli($this->datosConexionBD[0], $this->datosConexionBD[1], $this->datosConexionBD[2], $this->datosConexionBD[3]);
+            /* check connection */
+            if (mysqli_connect_errno()) {
+                return (printf("Error de conexi�n: %s\n", mysqli_connect_error()));
+                exit(); //salir
+            }
+            mysqli_set_charset($mysqli,"utf8");
+            $query =
+                "INSERT INTO periodos (periodo) 
+						VALUES ('".$this->periodo."')";
+
+            $resultado = $mysqli->query($query);
+            if (!$resultado) {
+                return (printf ("Errormessage: %s\n", $mysqli->error));
+            }else{
+
+
+                $mysqli->close();
+                return 'Registro Exitoso!';
+            }
+        }
     }
 ?>
