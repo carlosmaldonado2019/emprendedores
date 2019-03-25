@@ -16,7 +16,7 @@
   $asesores = new asesores($datosConexionBD);
   $result2 = $asesores->consultarAsesores();
   $periodos = new periodos($datosConexionBD);
-  $result5 = $periodos->consultaPeriodos();
+      $result5 = $periodos->consultaPeriodos();
 ?>
 <!DOCTYPE html>
 
