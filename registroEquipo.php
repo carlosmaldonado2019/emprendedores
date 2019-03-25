@@ -9,10 +9,14 @@
       }
   if ($_SESSION['rol']==0 || $_SESSION['rol']==2) {
   require 'lib/asesores.php';
+  require 'lib/periodos.php';
+
   $equipos = new equipos($datosConexionBD);
   $result = $equipos->consultaCarreras();
   $asesores = new asesores($datosConexionBD);
   $result2 = $asesores->consultarAsesores();
+  $periodos = new periodos($datosConexionBD);
+  $result5 = $periodos->consultaPeriodos();
 ?>
 <!DOCTYPE html>
 
@@ -110,12 +114,13 @@
   </div>
    <div class="form-group">
    <label>Periodo</label><br>
-    <select id="periodo" required>
-    	<option selected hidden value="">--Seleccione una opción--</option>
-    	<option value="2018-1">2018-1</option>
-      <option value="2018-2">2018-2</option>
-      <option value="2018-2">2019-1</option>
-    </select>
+       <select id='periodo' required><option selected value='' hidden>--Seleccione una opción--</option>
+           <?php
+           while($row = $result5->fetch_assoc()) { //while es un ciclo, fetch_assoc recupera una fila de resultados como un array asociativo
+               echo"<option value='".$row['periodo']."'>".$row['periodo']." </option> ";
+           }
+           ?>
+       </select>
   </div>
    <?php
   if ($_SESSION['rol']==2) {
