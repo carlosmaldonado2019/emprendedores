@@ -182,7 +182,7 @@
 		                            <li><a href="registroGrupo.php">Grupos</a></li>
 		                            <li><a href="registroUnidad.php">Unidades Académicas</a></li>
 		                            <li><a href="registroCarrera.php">Carreras</a></li>
-                                    <li><a href="registroPeriodo.php">Periodos</a></li>
+                                    <li><a href="registroPeriodos.php">Periodos</a></li>
 		                        </ul>
 		                    </li>
 		                    <li class="dropdown">
