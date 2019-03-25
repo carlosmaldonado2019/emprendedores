@@ -1,0 +1,46 @@
+header, footer, nav, .btnImprimir, .clear4{
+  display: none;
+}
+.clear0{clear: both; height: .1px;}
+.clear{clear: both; height: 20px;}
+h2{
+	margin: 5px;
+}
+.reportes{
+	width: 100%;
+}
+.uabc{
+	font-size: 10pt;
+}
+.fca{
+	font-size: 9pt;
+}
+.expo{
+	font-size: 8pt;
+}
+.tituloReporte, .semestre{
+	font-size: 7pt;
+}
+.logoEmpRep{
+	width:15%;
+	margin: 0px auto;
+	display: inline-block;
+	vertical-align: top;
+}
+.logoUABCrep{
+	width:12%;
+	margin: 0px auto;
+	display: inline-block;
+	vertical-align: top;
+}
+.tituloEmpRep{
+	width: 70%;
+	display: inline-block;
+}
+.firmas{
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+
+

@@ -1,0 +1,322 @@
+body{
+	font-size: 1.3em;
+	color: #848484;
+}
+.clear0{clear: both; height: .1px;}
+.clear{clear: both; height: 20px;}
+.clear4{clear: both; height: 40px;}
+button a:hover{
+	text-decoration: none;
+}
+/*ESTILOS HEADER*/
+.main-header{
+	margin: 0px auto;
+	background: white;
+}
+header {
+	padding:0px 0px 0px 0px;
+	margin: 0px auto;
+	background-color: #48D1CC;
+	color: white;
+}
+h2{
+	margin: 5px;
+}
+.encabezado{
+	height: 80px;
+	width: 100%;
+	padding-top: 10px;
+}
+.logoEmp{
+	width:12%;
+	margin: 0px auto;
+	display: inline-block;
+	vertical-align: top;
+}
+.logoUABC{
+	width:8%;
+	margin: 0px auto;
+	display: inline-block;
+	vertical-align: top;
+}
+.tituloEmp{
+	width:78%;
+	height: 20px;
+	margin: 0px auto;
+	display: inline-block;
+}
+.tituloTexto{
+	margin: 0px auto;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 2em;
+}
+.empLogo{
+	width: 100%;
+	height: 100%;
+}
+.uabcLogo{
+	width: 100%;
+	height: 100%;
+}
+.navbar{
+	margin: 0px auto;
+	color: white;
+	background-color: #48D1CC;
+	border:none;
+}
+.navbar-brand{
+	display: none;
+}
+nav#menuMaestro{
+	margin: 0px auto;
+	color: white;
+	background-color: green;
+	border:none;
+}
+nav#menuAlumno{
+	margin: 0px auto;
+	color: white;
+	background-color: #48D1CC;
+	border:none;
+}
+nav.navbar ul.nav li a{
+	color: white;
+	padding: 0px 10px;
+	margin: 0px auto;
+}
+nav.navbar ul.nav li a:hover{
+	text-decoration: underline;
+	color:white;
+}
+nav.navbar ul.dropdown-menu li a{
+	color: black;
+}
+nav.navbar ul.dropdown-menu li a:hover{
+	color: black;
+}
+.navbar ul{
+	margin: 0px auto;
+	text-align: center;
+}
+.navbar ul li{
+	padding-left: 1em;
+	margin: 10px auto;
+}
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+}
+/*ESTILOS PRINCIPAL*/
+.main{
+	margin-top: 130px;
+}
+h3{
+	border-bottom: 3px solid #3AAF40;
+}
+.contenedorBanner{
+	width: 70%;
+	margin: 0px auto;
+}
+.imgBanner{
+	width: 100%;
+}
+.contenedorBanner2{
+	width: 70%;
+	margin: 0px auto;
+}
+.imgBanner2{
+	width: 100%;
+}
+.tituloRegistroMaestro{
+	width: 40%;
+	margin: 0pc auto;
+}
+.tituloRegistroMaestro p{
+	text-align: center;
+	font-size: 1.5em;
+}
+.formRegistroMaestro{
+	width: 30%;
+	margin: 0px auto;
+}
+.tablaEquipos{
+	width: 90%;
+	margin: 0px auto;
+}
+.tituloEquipo p{
+	text-align: center;
+	font-size: 3em;
+}
+.datosEquipo{
+	border-top:1px solid #39b54a; 
+	width: 82%;
+	margin: 0px auto;
+	font-size: 1.7em;
+	padding: 40px;
+}
+.login{
+	width: 30%;
+	margin: 0px auto;
+}
+/*FOOTER*/
+footer{
+	background: #E6E6E6;
+	color: #424242;
+	margin:  60px auto 0px auto;
+	position: relative;
+	text-align: center;
+	position: bottom;
+	font-size: 1.5em;
+	min-width: 100%;
+	padding: 20px 0px;
+}
+small{
+	padding: 0px 10px;
+}
+.reportes{
+	width: 70%;
+	margin: 0px auto;
+}
+/*MEDIA QUERYS*/
+@media(max-width: 620px)
+{
+	.encabezado{
+	height: 80px;
+	width: 100%;
+	padding-top: 10px;
+	display: none;
+}
+.logoEmp{
+	width:12%;
+	height: 70px;
+	margin: 0px auto;
+	display: inline-block;
+	vertical-align: top;
+}
+.logoUABC{
+	width:8%;
+	height: 70px;
+	margin: 0px auto;
+	display: inline-block;
+	vertical-align: top;
+	display: none;
+}
+.tituloTexto{
+	margin: 0px auto;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1em;
+}
+.empLogo{
+	width: 100%;
+	height: 100%;
+}
+.uabcLogo{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.navbar-brand{
+	display: block;
+	color: white;
+	font-size: 10px;
+}
+.main{
+	margin-top: 50px;
+}
+.formRegistroMaestro{
+	width: 80%;
+	margin: 0px auto;
+}
+.tituloRegistroMaestro{
+	width: 80%;
+	margin: 0px auto;
+}
+.tituloRegistroMaestro p{
+	text-align: center;
+	font-size: 1.3em;
+}
+.tablaEquipos{
+	width: 90%;
+	margin: 0px auto;
+}
+.login{
+	width: 80%;
+	margin: 0px auto;
+}
+
+.tituloEquipo p{
+	text-align: center;
+	font-size: 2.7em;
+}
+.datosEquipo{
+	border-top:1px solid #39b54a; 
+	width: 100%;
+	margin: 0px auto;
+	font-size: 1.2em;
+	padding: 40px;
+}
+.contenedorBanner2{
+	width: 100%;
+	margin: 0px auto;
+}
+.imgBanner2{
+	width: 100%;
+}
+
+footer{
+	background: #E6E6E6;
+	color: #424242;
+	margin:  60px auto 0px auto;
+	position: relative;
+	text-align: center;
+	position: bottom;
+	font-size: .9em;
+	min-width: 100%;
+	padding: 20px 0px;
+}
+}
+/*--------------REPORTES-------------*/
+.uabc{
+	font-size: 30px;
+}
+.fca{
+	font-size: 25px;
+}
+.expo{
+	font-size: 20px;
+}
+.tituloReporte, .semestre{
+	font-size: 15px;
+}
+.tituloEmpRep{
+	width: 100%;
+	display: inline-block;
+}
+.logoEmpRep{
+	display: none;
+}
+.logoUABCrep{
+	display: none;
+}
+.firmas{
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+.lineaFirma{
+	border-top: 1px solid black;
+	width: 60%;
+	margin: 0px auto;
+}
+.firma{
+	display: inline-block;
+	width: 48%;
+	text-align: center;
+}
