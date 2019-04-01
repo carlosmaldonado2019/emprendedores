@@ -122,6 +122,7 @@
 						a.correoAlternativoAsesor,
 						a.celularAsesor,
 						a.unidadAcademicaAsesor,
+						a.contraseniaAsesor,
 						b.nombreUnidadAcademica AS nombreUnidadAcademica	
 					FROM asesores 
 					AS a INNER JOIN unidades AS b
