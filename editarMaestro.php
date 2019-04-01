@@ -126,6 +126,10 @@
   	<label>Correo electrónico</label>
     <input type="email" class="form-control" id="correo" value="<?= $correo;?>" required>
   </div>
+    <div class="form-group">
+        <label>Contrasenia</label>
+        <input type="text" class="form-control" id="contrasenia" value="<?= $contrasenia;?>" required>
+    </div>
   	<label>Correo electrónico alternativo (opcional)</label>
     <input type="email" class="form-control" id="correoAlternativo" value="<?= $correoAlternativo;?>">
   </div><br>
