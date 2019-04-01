@@ -113,7 +113,6 @@
 			mysqli_set_charset($mysqli,"utf8");
 			$query = "SELECT
 						a.idAsesor,
-						a.contraseniaAsesor,
 						a.numeroEmpleadoAsesor,
 						a.apellidoPaternoAsesor,
 						a.apellidoMaternoAsesor,
@@ -146,7 +145,7 @@
 				exit();
 			}
 			mysqli_set_charset($mysqli,"utf8");
-			$query = "UPDATE asesores SET numeroEmpleadoAsesor=".$this->numeroEmpleado.", apellidoPaternoAsesor='".$this->apellidoPaterno."',apellidoMaternoAsesor='".$this->apellidoMaterno."',nombreAsesor='".$this->nombre."',sexoAsesor='".$this->sexo."',correoAsesor='".$this->correo."',correoAlternativoAsesor='".$this->correoAlternativo."',celularAsesor='".$this->celular."',unidadAcademicaAsesor=".$this->unidadAcademica.",contraseniaAsesor=".$this->contraseniaAsesor." WHERE idAsesor='".$this->id."'"; //sentencia para mostrar todos los resgistros de una tabla
+			$query = "UPDATE asesores SET numeroEmpleadoAsesor=".$this->numeroEmpleado.", apellidoPaternoAsesor='".$this->apellidoPaterno."',apellidoMaternoAsesor='".$this->apellidoMaterno."',nombreAsesor='".$this->nombre."',sexoAsesor='".$this->sexo."',correoAsesor='".$this->correo."',correoAlternativoAsesor='".$this->correoAlternativo."',celularAsesor='".$this->celular."',unidadAcademicaAsesor=".$this->unidadAcademica." WHERE idAsesor='".$this->id."'"; //sentencia para mostrar todos los resgistros de una tabla
 			$resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos 
 			if (!$resultado) { //condici�n
 				printf("Errormessage: %s\n", $mysqli->error); //Devuelve el c�digo de error de la �ltima llamada
