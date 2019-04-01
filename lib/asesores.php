@@ -18,11 +18,11 @@
 		 	$this->datosConexionBD=$datosConexionBD;
 		 }
 		 public function altaAsesor(){			
-			/* conexión a la base de datos */
+			/* conexiï¿½n a la base de datos */
 			$mysqli = new mysqli($this->datosConexionBD[0], $this->datosConexionBD[1], $this->datosConexionBD[2], $this->datosConexionBD[3]);			
 			/* check connection */
-			if (mysqli_connect_errno()) { //condición
-			    return (printf("Error de conexión: %s\n", mysqli_connect_error())); //Devuelve el código de error de la última llamada
+			if (mysqli_connect_errno()) { //condiciï¿½n
+			    return (printf("Error de conexiï¿½n: %s\n", mysqli_connect_error())); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
 			    exit(); //salir
 			}
 			mysqli_set_charset($mysqli,"utf8");
@@ -51,51 +51,51 @@
 							".$this->unidadAcademica."
 						)";	
 			//echo $query;
-			$resultado = $mysqli->query($query); //envía una única consulta a la base de datos 
-			if (!$resultado) { //condición
-				 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el código de error de la última llamada
-			}else{ //Lo contrario de if en la condición
+			$resultado = $mysqli->query($query); //envï¿½a una ï¿½nica consulta a la base de datos 
+			if (!$resultado) { //condiciï¿½n
+				 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
+			}else{ //Lo contrario de if en la condiciï¿½n
 				
 				/* close connection */
 				$mysqli->close();
-				return "Registro exitoso"; //Devuelve un  mensaje exitosos de la última llamada
+				return "Registro exitoso"; //Devuelve un  mensaje exitosos de la ï¿½ltima llamada
 			}			
 		}
 		public function consultarAsesores(){			
-			/* conexión a la base de datos */
+			/* conexiï¿½n a la base de datos */
 			$mysqli = new mysqli($this->datosConexionBD[0], $this->datosConexionBD[1], $this->datosConexionBD[2], $this->datosConexionBD[3]);			
 			/* check connection */
-			if (mysqli_connect_errno()) { //condición
-			    return (printf("Error de conexión: %s\n", mysqli_connect_error())); //Devuelve el código de error de la última llamada
+			if (mysqli_connect_errno()) { //condiciï¿½n
+			    return (printf("Error de conexiï¿½n: %s\n", mysqli_connect_error())); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
 			    exit(); //salir
 			}
 			mysqli_set_charset($mysqli,"utf8");
 				$query = "SELECT * FROM asesores WHERE rolUsuario=0 ORDER BY apellidoPaternoAsesor";	
 			//echo $query;
-			$resultado = $mysqli->query($query); //envía una única consulta a la base de datos 
-			if (!$resultado) { //condición
-				 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el código de error de la última llamada
-			}else{ //Lo contrario de if en la condición
+			$resultado = $mysqli->query($query); //envï¿½a una ï¿½nica consulta a la base de datos 
+			if (!$resultado) { //condiciï¿½n
+				 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
+			}else{ //Lo contrario de if en la condiciï¿½n
 				
 				/* close connection */
 				$mysqli->close();
-				return $resultado; //Devuelve un  mensaje exitosos de la última llamada
+				return $resultado; //Devuelve un  mensaje exitosos de la ï¿½ltima llamada
 			}			
 		}
 
 		public function consultarUnidades(){
-			/* conexión a la base de datos */
+			/* conexiï¿½n a la base de datos */
 			$mysqli = new mysqli($this->datosConexionBD[0], $this->datosConexionBD[1], $this->datosConexionBD[2], $this->datosConexionBD[3]);
 			/* check connection */
-			if (mysqli_connect_errno()) { //condición
-				printf("Error de conexión: %s\n", mysqli_connect_error()); //Devuelve el código de error de la última llamada
+			if (mysqli_connect_errno()) { //condiciï¿½n
+				printf("Error de conexiï¿½n: %s\n", mysqli_connect_error()); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
 				exit();
 			}
 			mysqli_set_charset($mysqli,"utf8");
 			$query = "SELECT * FROM unidades"; //sentencia para mostrar todos los resgistros de una tabla
-			$resultado = $mysqli->query($query); //envía una única consulta a la base de datos 
-			if (!$resultado) { //condición
-				printf("Errormessage: %s\n", $mysqli->error); //Devuelve el código de error de la última llamada
+			$resultado = $mysqli->query($query); //envï¿½a una ï¿½nica consulta a la base de datos 
+			if (!$resultado) { //condiciï¿½n
+				printf("Errormessage: %s\n", $mysqli->error); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
 			}
 			
 			/* close connection */
@@ -103,16 +103,17 @@
 			return $resultado;
 		}
 		public function consultarAsesorId(){
-			/* conexión a la base de datos */
+			/* conexiï¿½n a la base de datos */
 			$mysqli = new mysqli($this->datosConexionBD[0], $this->datosConexionBD[1], $this->datosConexionBD[2], $this->datosConexionBD[3]);
 			/* check connection */
-			if (mysqli_connect_errno()) { //condición
-				printf("Error de conexión: %s\n", mysqli_connect_error()); //Devuelve el código de error de la última llamada
+			if (mysqli_connect_errno()) { //condiciï¿½n
+				printf("Error de conexiï¿½n: %s\n", mysqli_connect_error()); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
 				exit();
 			}
 			mysqli_set_charset($mysqli,"utf8");
 			$query = "SELECT
 						a.idAsesor,
+						a.contraseniaAsesor,
 						a.numeroEmpleadoAsesor,
 						a.apellidoPaternoAsesor,
 						a.apellidoMaternoAsesor,
@@ -127,9 +128,9 @@
 					AS a INNER JOIN unidades AS b
 						ON a.unidadAcademicaAsesor = b.claveUnidadAcademica
 					WHERE idAsesor='".$this->id."'"; //sentencia para mostrar todos los resgistros de una tabla
-			$resultado = $mysqli->query($query); //envía una única consulta a la base de datos 
-			if (!$resultado) { //condición
-				printf("Errormessage: %s\n", $mysqli->error); //Devuelve el código de error de la última llamada
+			$resultado = $mysqli->query($query); //envï¿½a una ï¿½nica consulta a la base de datos 
+			if (!$resultado) { //condiciï¿½n
+				printf("Errormessage: %s\n", $mysqli->error); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
 			}
 			
 			/* close connection */
@@ -137,39 +138,39 @@
 			return $resultado;
 		}
 		public function editarAsesor(){
-			/* conexión a la base de datos */
+			/* conexiï¿½n a la base de datos */
 			$mysqli = new mysqli($this->datosConexionBD[0], $this->datosConexionBD[1], $this->datosConexionBD[2], $this->datosConexionBD[3]);
 			/* check connection */
-			if (mysqli_connect_errno()) { //condición
-				printf("Error de conexión: %s\n", mysqli_connect_error()); //Devuelve el código de error de la última llamada
+			if (mysqli_connect_errno()) { //condiciï¿½n
+				printf("Error de conexiï¿½n: %s\n", mysqli_connect_error()); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
 				exit();
 			}
 			mysqli_set_charset($mysqli,"utf8");
-			$query = "UPDATE asesores SET numeroEmpleadoAsesor=".$this->numeroEmpleado.", apellidoPaternoAsesor='".$this->apellidoPaterno."',apellidoMaternoAsesor='".$this->apellidoMaterno."',nombreAsesor='".$this->nombre."',sexoAsesor='".$this->sexo."',correoAsesor='".$this->correo."',correoAlternativoAsesor='".$this->correoAlternativo."',celularAsesor='".$this->celular."',unidadAcademicaAsesor=".$this->unidadAcademica." WHERE idAsesor='".$this->id."'"; //sentencia para mostrar todos los resgistros de una tabla
-			$resultado = $mysqli->query($query); //envía una única consulta a la base de datos 
-			if (!$resultado) { //condición
-				printf("Errormessage: %s\n", $mysqli->error); //Devuelve el código de error de la última llamada
+			$query = "UPDATE asesores SET numeroEmpleadoAsesor=".$this->numeroEmpleado.", apellidoPaternoAsesor='".$this->apellidoPaterno."',apellidoMaternoAsesor='".$this->apellidoMaterno."',nombreAsesor='".$this->nombre."',sexoAsesor='".$this->sexo."',correoAsesor='".$this->correo."',correoAlternativoAsesor='".$this->correoAlternativo."',celularAsesor='".$this->celular."',unidadAcademicaAsesor=".$this->unidadAcademica.",contraseniaAsesor=".$this->contraseniaAsesor." WHERE idAsesor='".$this->id."'"; //sentencia para mostrar todos los resgistros de una tabla
+			$resultado = $mysqli->query($query); //envï¿½a una ï¿½nica consulta a la base de datos 
+			if (!$resultado) { //condiciï¿½n
+				printf("Errormessage: %s\n", $mysqli->error); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
 			}
 			
 			/* close connection */
 			$mysqli->close();
-			return "Los datos han sido actualiados con éxito";
+			return "Los datos han sido actualiados con ï¿½xito";
 		}
 		public function eliminarAsesor(){			
-			/* conexión a la base de datos */
+			/* conexiï¿½n a la base de datos */
 			$mysqli = new mysqli($this->datosConexionBD[0], $this->datosConexionBD[1], $this->datosConexionBD[2], $this->datosConexionBD[3]);			
 			/* check connection */
-			if (mysqli_connect_errno()) { //condición
-			    return (printf("Error de conexión: %s\n", mysqli_connect_error())); //Devuelve el código de error de la última llamada
+			if (mysqli_connect_errno()) { //condiciï¿½n
+			    return (printf("Error de conexiï¿½n: %s\n", mysqli_connect_error())); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
 			    exit(); //salir
 			}
 			mysqli_set_charset($mysqli,"utf8");
 				$query = "DELETE FROM asesores WHERE idAsesor='".$this->id."'";	
 			//echo $query;
-			$resultado = $mysqli->query($query); //envía una única consulta a la base de datos 
-			if (!$resultado) { //condición
-				 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el código de error de la última llamada
-			}else{ //Lo contrario de if en la condición
+			$resultado = $mysqli->query($query); //envï¿½a una ï¿½nica consulta a la base de datos 
+			if (!$resultado) { //condiciï¿½n
+				 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el cï¿½digo de error de la ï¿½ltima llamada
+			}else{ //Lo contrario de if en la condiciï¿½n
 				
 				/* close connection */
 				$mysqli->close();
