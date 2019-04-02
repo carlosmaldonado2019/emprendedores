@@ -2,10 +2,10 @@
 
 	class usuarios{
 		var $correo;
-		var $contrasenia; 	
-		var $celular; 	
+		var $contrasenia;
+		var $celular;
 		private $datosConexionBD;
-		
+
 		//Declaramos el m�todo constructor
 		 function __construct($datosConexionBD){
 		 	$this->datosConexionBD=$datosConexionBD;
@@ -20,50 +20,45 @@
 			$query ="SELECT * FROM asesores WHERE correoAsesor='".$this->correo."'"; //Sentencia para consultar un ususario por su correo
 			$resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos
 			if (!$resultado) { //condici�n
-					 //return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el c�digo de error de la �ltima llamada
-				}
-			else{
+					 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el c�digo de error de la �ltima llamada
+				}else{
 					$row = $resultado->fetch_assoc(); //fetch_assoc recupera una fila de resultados como un array asociativo
 					if (count($row) > 0){ //condici�n
-						
+
 						if ($row['contraseniaAsesor'] ==$this->contrasenia){ //row muestra el resultado de un campo al realizar una consulta-->
-							$_SESSION['login'] = true;	
+							$_SESSION['login'] = true;
 							$_SESSION['rol'] =$row['rolUsuario'];
-							$_SESSION['id'] =$row['idAsesor'];	
+							$_SESSION['id'] =$row['idAsesor'];
 							$_SESSION['nombre'] =$row['nombreAsesor'];
-							return 1;					
+							return 1;
 						}else{
 							echo 'Contrase�a incorrecta'; //La funcion echo sirve para imprimir una cadena
 						}
-					}
-					else{
+					}else{
 						$query ="SELECT * FROM alumnos WHERE correoAlumno='".$this->correo."'"; //Sentencia para consultar un ususario por su correo
-			            $resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos
-                        if (!$resultado) { //condici�n
-                                 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el c�digo de error de la �ltima llamada
-                            }
-                        else{
-                                    $row = $resultado->fetch_assoc(); //fetch_assoc recupera una fila de resultados como un array asociativo
-                                    if (count($row) > 0){ //condici�n
+			$resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos
+			if (!$resultado) { //condici�n
+					 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el c�digo de error de la �ltima llamada
+				}else{
+					$row = $resultado->fetch_assoc(); //fetch_assoc recupera una fila de resultados como un array asociativo
+					if (count($row) > 0){ //condici�n
 
-                                        if ($row['contraseniaAlumno'] ==$this->contrasenia){ //row muestra el resultado de un campo al realizar una consulta-->
+						if ($row['contraseniaAlumno'] ==$this->contrasenia){ //row muestra el resultado de un campo al realizar una consulta-->
 
-                                            $_SESSION['login'] = true;
-                                            $_SESSION['rol'] =$row['rolUsuario'];
-                                            $_SESSION['id'] =$row['idAlumno'];
-                                            $_SESSION['nombre'] =$row['nombreAlumno'];
-                                            $_SESSION['constancia'] =$row['constanciaAlumno'];
-                                            $_SESSION['constanciaEquipo'] =$row['constanciaEquipo'];
-                                            return 1;
-                                        }
-                                        else{
-                                            echo 'Contrase�a incorrecta'; //La funcion echo sirve para imprimir una cadena
-                                        }
-                                    }
-                                    else{
-                                        echo 'El correo no existe'; //La funcion echo sirve para imprimir una cadena
-                                    }
-                                }
+							$_SESSION['login'] = true;
+							$_SESSION['rol'] =$row['rolUsuario'];
+							$_SESSION['id'] =$row['idAlumno'];
+							$_SESSION['nombre'] =$row['nombreAlumno'];
+							$_SESSION['constancia'] =$row['constanciaAlumno'];
+							$_SESSION['constanciaEquipo'] =$row['constanciaEquipo'];
+							return 1;
+						}else{
+							echo 'Contrase�a incorrecta'; //La funcion echo sirve para imprimir una cadena
+						}
+					}else{
+						echo 'El correo no existe'; //La funcion echo sirve para imprimir una cadena
+					}
+					}
 					/* close connection */
 					$mysqli->close();
 				}
@@ -78,7 +73,7 @@
 			}
 				$query ="SELECT * FROM asesores WHERE correoAsesor = '".$this->correo."'"; //Sentencia para consultar un ususario por su correo
 				$resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos
-				if (!$resultado) 
+				if (!$resultado)
 				{
 					 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el c�digo de error de la �ltima llamada
 				}
@@ -86,12 +81,12 @@
 				{
 					$row = $resultado->fetch_assoc(); //fetch_assoc recupera una fila de resultados como un array asociativo
 					if (count($row) > 0)
-					{ 
+					{
 						if ($row['celularAsesor'] ==$this->celular)
-						{ 
-							return 1; //La funcion echo sirve 
+						{
+							return 1; //La funcion echo sirve
 							/* close connection */
-							$mysqli->close();					
+							$mysqli->close();
 						}
 						else
 						{
@@ -102,9 +97,9 @@
 					}
 					else
 					{
-						$query ="SELECT * FROM alumnos WHERE correoAlumno = '".$this->correo."'"; 
+						$query ="SELECT * FROM alumnos WHERE correoAlumno = '".$this->correo."'";
 						$resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos
-						if (!$resultado) 
+						if (!$resultado)
 						{
 							 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el c�digo de error de la �ltima llamada
 						}
@@ -112,12 +107,12 @@
 						{
 							$row = $resultado->fetch_assoc(); //fetch_assoc recupera una fila de resultados como un array asociativo
 							if (count($row) > 0)
-							{ 
+							{
 								if ($row['celularAlumno'] ==$this->celular)
-								{ 
-									return 1; //La funcion echo sirve 
+								{
+									return 1; //La funcion echo sirve
 									/* close connection */
-									$mysqli->close();					
+									$mysqli->close();
 								}
 								else
 								{
@@ -131,9 +126,9 @@
 								return 2;
 								/* close connection */
 								$mysqli->close();
-							}					
+							}
 						}
-					}					
+					}
 				}
 			}
 			public function cambioContrasenia(){
@@ -147,7 +142,7 @@
 			mysqli_set_charset($mysqli,"utf8");
 			$query ="SELECT * FROM asesores WHERE correoAsesor = '".$this->correo."'"; //Sentencia para consultar un ususario por su correo
 			$resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos
-			if (!$resultado) 
+			if (!$resultado)
 			{
 				 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el c�digo de error de la �ltima llamada
 			}
@@ -155,11 +150,11 @@
 			{
 				$row = $resultado->fetch_assoc(); //fetch_assoc recupera una fila de resultados como un array asociativo
 				if (count($row) > 0)
-				{ 
+				{
 					$query = "UPDATE asesores 
 								SET contraseniaAsesor='".$this->contrasenia."' 
 							WHERE correoAsesor = '".$this->correo."'"; //sentencia para mostrar todos los resgistros de una tabla
-					$resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos 
+					$resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos
 					if (!$resultado) { //condici�n
 						printf("Errormessage: %s\n", $mysqli->error); //Devuelve el c�digo de error de la �ltima llamada
 					}
@@ -171,9 +166,9 @@
 				}
 				else
 				{
-					$query ="SELECT * FROM alumnos WHERE correoAlumno = '".$this->correo."'"; 
+					$query ="SELECT * FROM alumnos WHERE correoAlumno = '".$this->correo."'";
 					$resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos
-					if (!$resultado) 
+					if (!$resultado)
 					{
 						 return (printf ("Errormessage: %s\n", $mysqli->error)); //Devuelve el c�digo de error de la �ltima llamada
 					}
@@ -181,11 +176,11 @@
 					{
 						$row = $resultado->fetch_assoc(); //fetch_assoc recupera una fila de resultados como un array asociativo
 						if (count($row) > 0)
-						{ 
+						{
 							$query = "UPDATE alumnos 
 								SET contraseniaAlumno='".$this->contrasenia."' 
 							WHERE correoAlumno = '".$this->correo."'"; //sentencia para mostrar todos los resgistros de una tabla
-							$resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos 
+							$resultado = $mysqli->query($query); //env�a una �nica consulta a la base de datos
 							if (!$resultado) { //condici�n
 								printf("Errormessage: %s\n", $mysqli->error); //Devuelve el c�digo de error de la �ltima llamada
 							}
@@ -198,9 +193,9 @@
 						else
 						{
 							$mysqli->close();
-						}					
+						}
 					}
-				}					
+				}
 			}
 		}
 	}
