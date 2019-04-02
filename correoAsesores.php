@@ -114,6 +114,6 @@ $resultado = mysql_query($sql, $link);
     echo "Acceso denegado";
   }
 }else{
-  header("LOCATION: http://fcauabc.com/emprendedores/"); //RedirecciÃ³n del navegador
+  header("LOCATION: http://emprendedores.fcauabc.com"); //RedirecciÃ³n del navegador
 }
 ?>
