@@ -7,9 +7,6 @@ include 'config.php';
   require 'lib/asesores.php';
   $asesores = new asesores($datosConexionBD);
   $result = $asesores->consultarAsesores();
-
-
-
 ?>
   <body>
      <div class="clear4"></div>

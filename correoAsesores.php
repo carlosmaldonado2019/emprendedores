@@ -3,12 +3,10 @@ session_start(); // Iniciar una nueva sesiÃ³n o reanudar la existente
   if(isset($_SESSION['login'])){ //condiciÃ³n, isset determina si una variable estÃ¡ definida
      if ($_SESSION['rol']==2) {
   include('menuAdmin.php');
-include 'config.php';
+  include 'config.php';
   require 'lib/asesores.php';
   $asesores = new asesores($datosConexionBD);
   $result = $asesores->consultarAsesores();
-
-
 
 ?>
   <body>
