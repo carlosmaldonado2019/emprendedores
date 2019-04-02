@@ -1,6 +1,7 @@
 <?php
 	session_start(); // Iniciar una nueva sesión o reanudar la existente
-	if(isset($_SESSION['login'])){ //condición, isset determina si una variable está definida
+	if(isset($_SESSION['login']))
+	{ //condición, isset determina si una variable está definida
     if ($_SESSION['rol']==0) {
 	    include('menuMaestro.php');
       include 'config.php';
@@ -219,6 +220,6 @@
     echo "Acceso denegado";
   }
 }else{
-  header("LOCATION: http://fcauabc.com/emprendedores/"); //Redirección del navegador
+  header("LOCATION: http://emprendedores.fcauabc.com"); //Redirección del navegador
 }
 ?>

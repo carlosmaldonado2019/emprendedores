@@ -57,7 +57,7 @@ mysql_select_db ("db_9f6318_empren", $link);
 
 mysql_set_charset('utf8');
 
-$sql = ("SELECT correoAlumno FROM alumnos WHERE periodoAlumno = '2018-2'");
+$sql = ("SELECT correoAlumno FROM alumnos WHERE periodoAlumno = '2019-1'");
 
 $resultado = mysql_query($sql, $link);
 
@@ -123,6 +123,6 @@ $resultado = mysql_query($sql, $link);
     echo "Acceso denegado";
   }
 }else{
-  header("LOCATION: http://fcauabc.com/emprendedores/"); //RedirecciÃ³n del navegador
+  header("LOCATION: http://emprendedores.fcauabc.com"); //RedirecciÃ³n del navegador
 }
 ?>

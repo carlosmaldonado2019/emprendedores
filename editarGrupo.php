@@ -133,6 +133,6 @@ session_start(); // Iniciar una nueva sesión o reanudar la existente
     echo "Acceso denegado";
   }
 }else{
-  header("LOCATION: http://fcauabc.com/emprendedores/"); //Redirección del navegador
+  header("LOCATION: http://emprendedores.fcauabc.com"); //Redirección del navegador
 }
 ?>
