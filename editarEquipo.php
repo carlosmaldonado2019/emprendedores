@@ -115,6 +115,13 @@
       <option value="SOCIAL">SOCIAL</option>
       <option value="TECNOLOGÍA INTERMEDIA">TECNOLOGÍA INTERMEDIA</option>
       <option value="BASE TECNOLÓGICA">BASE TECNOLÓGICA</option>
+        <option value="Tecnologìas de informaciòn y comunicaciòn (TIC)">TICs</option>
+        <option value="Agroindustria e Industria Alimenticia">Agroindustria e Industria Alimenticia</option>
+        <option value="Ciencias de la salud y Farmacèutica">Ciencias de la salud y Farmac&eacuteutica</option>
+        <option value="Proyectos industriales y Tecnològicos">Proyectos industriales y Tecnol&oacutegicos</option>
+        <option value="Medio Ambiente, Desarrollo Sustentable y Energìa">Medio Ambiente, Desarrollo Sustentable y Energ&iacutea</option>
+        <option value="Artìsticos y Culturales">Art&iacutesticos � Culturales</option>
+        <option value="Proyectos de Servicios">Proyectos de Servicios</option>
     </select>
   </div>
   <div class="form-group">
