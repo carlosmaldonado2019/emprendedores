@@ -10,8 +10,7 @@
         <small><strong>Coordinador de Emprendedores, bolsa de trabajo y educaci&oacute;n continua</strong></small><br><br>
         <small><strong>Correo electrónico:</strong> tomas.cervantes@uabc.edu.mx</small>
         <small><strong>Oficina:</strong>(686) 5-82-33-77 Ext. 45043</small>
-        <small><strong> Celular:</strong>044 (686) 11-69-89-2</small><br><br>
-        <small><strong> Dudas: </strong>Dra. Sandra Julieta Saldivar Gonzalez</small><br>
+        <small><strong> Soporte Técnico: </strong>Dra. Sandra Julieta Saldivar Gonzalez</small><br>
         <small><strong>Encargada de sistema de emprendedores</strong></small><br><br>
         <small><strong>Correo electrónico: </strong>yuly@uabc.edu.mx</small>
 	<small><strong>Celular: </strong>(686) 221-6149</small><br><br>
